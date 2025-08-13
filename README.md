@@ -46,4 +46,11 @@ Precision is a metric that measures the accuracy of positive predictions of a mo
 Recall is metric that measures the ability of a model to correctly identify all relevant instances or positive cases in a dataset. A high recall score shows that the model is effective at finding most of the positive instances, minimizing the number of missed positive cases (false negatives). In this case, the neural network (0.35) has the highest recall than the XGB (0.15) and the RF(0.13).
 The F1 score is a machine learning metric that represents the harmonic mean of precision and recall. It is used to evaluate the performance of classification models, particularly when dealing with imbalanced datasets, where one class has significantly more instances than others. A higher F1 score (closer to 1) indicates better model performance, signifying a good balance between precision and recall. Since STOTE was used to balance the data, F1 scores for all the models is marginally different with RF(0.15) and both XGB and NN with approximatly (0.16) score. 
 
-  
+**Surrogate Models   **
+**Logistic Regression**
+**Decision Trees**
+**Naive Bayes**
+**K-Nearest Neighbors**
+**Support Vector Machines**
+**Naive Bayes**
+
