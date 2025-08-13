@@ -37,8 +37,8 @@ The aim is to find the black-box model that performs better that the others on t
 <img width="749" height="398" alt="image" src="https://github.com/user-attachments/assets/2724d06f-1cc1-41e9-99a7-836c72ae8665" />
 
 
-The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
-Precision and Recall: Both models have high precision and recall for class 0 (no stroke), indicating that they are good at identifying instances of no stroke correctly. However, both models perform poorly for class 1 (stroke), with low precision, recall, and F1-score. This suggests that the models struggle to correctly classify instances of stroke.
-F1-score: The F1-scores for both classes are low for both models, indicating poor overall performance in capturing the true positive instances for both strokes and no strokes.
-Accuracy: Both models have the same accuracy of 0.93, which might be misleading due to the class imbalance. High accuracy can be achieved by simply predicting the majority class (no stroke) most of the time.
-Overall, both models show suboptimal performance in accurately predicting instances of stroke, as evidenced by low precision, recall, and F1-score for class 1. However, the Neural Network model slightly outperforms the XGBoost model in terms of AUC-PR.
+These Black-box models are evaluated on the classifictation metrics shown above. The ROC_AUC score (Receiver Operating Characters Area Under the Curve) is a metric used to evaluate the performance of a binary classification model by showing the model's ability to differentiate between two classes across all possible classification thresholds. The ROC_AUC score of 1 means the classifier is perfect and 0.5 means a random classifier. Values between 0.5 and 1.0: Represent the model's ability to distinguish between the classes, with higher values indicating better performance. In this case, the Neural Ntwork has a higher ROC_AUC value of
+(0.59) compared to XGBost with ROC_AUC value of (0.56) and Random Forest ROC_AUC value of (0.55).
+
+The accuracy score is an evaluation metric is a percentage measure that tells how often a model can correctly predict an outcome. In this case, the  XGBost has the highest accuracy value of (0..90) the followed by the Random Forest with the accuracy value of (0.89) and lastly the Neural Ntwork has the lowest accuracy value of (0.80).
+  
