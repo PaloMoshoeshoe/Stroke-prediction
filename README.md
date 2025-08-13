@@ -19,6 +19,8 @@ Neural Network Model:
 Before performing Neural Network, the dataset was normalized. The model consists of three hidden layers with 400, 400, and 128 neurons respectively, and reLU activation function. Two dropouts are performed for avoiding overfitting. The output layer has a single neuron with sigmoid activation since we are performing binary classification (stroke or no stroke).
 
 Black-Box Models Evaluation
+
+
 <img width="516" height="135" alt="image" src="https://github.com/user-attachments/assets/3459f8db-4084-4011-b59a-568998dcc189" />
 
 AUC-PR: The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
