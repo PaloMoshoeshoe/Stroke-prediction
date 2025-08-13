@@ -3,7 +3,7 @@ A stroke is a medical condition in which poor blood flow to the brain causes cel
 
 Dataset:
 The dataset used is obtained from Kaggle.
-This dataset is imbalanced (96%:4% no stroke and stroke respectfully). The dataset was balanced using SMOTE (Synthetic Minority Over-sampling Technique).
+This dataset is imbalanced (95.13% : 4.87% no stroke and stroke respectfully). The dataset was balanced using SMOTE (Synthetic Minority Over-sampling Technique).
 
 <img width="386" height="779" alt="image" src="https://github.com/user-attachments/assets/8b55f1cb-ed99-4f9f-a837-10e286111fc8" />
 
@@ -24,13 +24,17 @@ The XGBoost model is performed with 300 estimators, a maximum depth of 10, and a
 Neural Network Model:
 Before performing Neural Network, the dataset was normalized. The model consists of three hidden layers with 400, 400, and 128 neurons respectively, and reLU activation function. Two dropouts are performed for avoiding overfitting. The output layer has a single neuron with sigmoid activation since we are performing binary classification (stroke or no stroke).
 
-Black-Box Models Evaluation
-The aim to find the black-box model that performs better that the others on our dataset
+Black-Box Models Evaluation:
+The aim is to find the black-box model that performs better that the others on the dataset on each classification evaluation metric.
 
 
-<img width="516" height="135" alt="image" src="https://github.com/user-attachments/assets/3459f8db-4084-4011-b59a-568998dcc189" />
+<img width="657" height="252" alt="image" src="https://github.com/user-attachments/assets/6b94874b-9cfa-4348-9563-257f36d5ab7a" />
+<img width="716" height="247" alt="image" src="https://github.com/user-attachments/assets/f841196c-8793-41ec-807b-1259fb496692" />
+<img width="675" height="280" alt="image" src="https://github.com/user-attachments/assets/5c5578b4-cf7e-4461-984a-a9ec1a2773d8" />
 
-AUC-PR: The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
+
+
+The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
 Precision and Recall: Both models have high precision and recall for class 0 (no stroke), indicating that they are good at identifying instances of no stroke correctly. However, both models perform poorly for class 1 (stroke), with low precision, recall, and F1-score. This suggests that the models struggle to correctly classify instances of stroke.
 F1-score: The F1-scores for both classes are low for both models, indicating poor overall performance in capturing the true positive instances for both strokes and no strokes.
 Accuracy: Both models have the same accuracy of 0.93, which might be misleading due to the class imbalance. High accuracy can be achieved by simply predicting the majority class (no stroke) most of the time.
