@@ -1,3 +1,26 @@
-The aim is to find a black-model(Deep-learning model or Boosting model or Random forest model) that best predict whether a patient is likely to have stroke based on measurable predictors. To determine whether a patient has experienced a stroke, we examine a dataset of strokes and develop a number of statistical models based on quantifiable predictors. A number of easily measurable risk factors, including age, smoking, and hypertension, are needed to determine whether a person will have a stroke. We are compelled to take into account metrics other than the model's accuracy because of the extremely skewness of the data (roughly 96% of the patients have never experienced a stroke). We therefore develop a variety of methods and offer their accuracy, recall, and precision. This is a complete technical report.
-About the data
-Stroke appears amongst hihgly deadliest disease globally that affects millions of people and it 's very fatal. The dataset that is used in this project is sourced from Kaggle. A stroke is a condition where blood flow to the brain is decreased, causing cell death in the brain. One can roughly classify strokes into two main types: Ischemic stroke, which is due [owing] to lack [paucity, dearth, scarcity] of blood flow, and hemorrhagioc stroke, due [owing] to bleeding. Both variants cause the brain to stop functioning properly. As strokes are one of the leading causes of death, it is of vital importance to understand and comprehend the condition, as well as being able to predict the condition in advance so that preventive measures can be taken to decrease the chance. If you suspect that someone is experiencing a stroke (due to e.g. If you are struggling to say simple complete sentences, or struggling to smile), then call your respective emergency number (in Norway: 113) immediately.
+Introduction: Understanding and interpreting the inner workings of black-box models is challenging due to their “black box” nature. Explainable artificial intelligence (XAI) is a field of research that seeks to explain the how and why of DL model prediction. XAI is intended to increase confidence in decision-making by understanding how models work, behave, and deliver results. Interpretable models are implemented as surrogates to black-box models on binary classification problem (Stroke prediction).
+A stroke is a medical condition in which poor blood flow to the brain causes cell death.
+
+Dataset:
+The dataset used is obtained from Kaggle.
+This dataset is imbalanced (96%:4% no stroke and stroke respectfully). The dataset was balanced using SMOTE (Synthetic Minority Over-sampling Technique).
+Context:
+There are two main types of stroke: ischemic, due to lack of blood flow, and hemorrhagic, due to bleeding. Both cause parts of the brain to stop functioning properly.
+Signs and symptoms of a stroke may include an inability to move or feel on one side of the body, problems understanding or speaking, dizziness, or loss of vision to one side. Signs and symptoms often appear soon after the stroke has occurred.
+If symptoms last less than one or two hours, the stroke is a transient ischemic attack (TIA), also called a mini-stroke. A hemorrhagic stroke may also be associated with a severe headache. The symptoms of a stroke can be permanent. Long-term complications may include pneumonia and loss of bladder control.
+The main risk factor for stroke is high blood pressure. Other risk factors include high blood cholesterol, tobacco smoking, obesity, diabetes mellitus, a previous TIA, end-stage kidney disease, and atrial fibrillation.
+Black-Box Models used:
+Random Forest Model:
+
+XGBoost Model:
+The XGBoost model is performed with 300 estimators, a maximum depth of 10, and a learning rate of 0.1. These parameters are gained using GridSearchCV.
+
+Neural Network Model:
+Before performing Neural Network, the dataset was normalized. The model consists of three hidden layers with 400, 400, and 128 neurons respectively, and reLU activation function. Two dropouts are performed for avoiding overfitting. The output layer has a single neuron with sigmoid activation since we are performing binary classification (stroke or no stroke).
+
+Conclusion:
+AUC-PR: The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
+Precision and Recall: Both models have high precision and recall for class 0 (no stroke), indicating that they are good at identifying instances of no stroke correctly. However, both models perform poorly for class 1 (stroke), with low precision, recall, and F1-score. This suggests that the models struggle to correctly classify instances of stroke.
+F1-score: The F1-scores for both classes are low for both models, indicating poor overall performance in capturing the true positive instances for both strokes and no strokes.
+Accuracy: Both models have the same accuracy of 0.93, which might be misleading due to the class imbalance. High accuracy can be achieved by simply predicting the majority class (no stroke) most of the time.
+Overall, both models show suboptimal performance in accurately predicting instances of stroke, as evidenced by low precision, recall, and F1-score for class 1. However, the Neural Network model slightly outperforms the XGBoost model in terms of AUC-PR.
