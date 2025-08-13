@@ -31,6 +31,8 @@ The aim is to find the black-box model that performs better that the others on t
 <img width="657" height="252" alt="image" src="https://github.com/user-attachments/assets/6b94874b-9cfa-4348-9563-257f36d5ab7a" />
 <img width="716" height="247" alt="image" src="https://github.com/user-attachments/assets/f841196c-8793-41ec-807b-1259fb496692" />
 <img width="699" height="268" alt="image" src="https://github.com/user-attachments/assets/a8baabd3-22c5-4078-81a2-5575e52d5821" />
+<img width="777" height="198" alt="image" src="https://github.com/user-attachments/assets/da7f82c2-6ad0-41fd-9e90-aa870226684b" />
+<img width="749" height="398" alt="image" src="https://github.com/user-attachments/assets/2724d06f-1cc1-41e9-99a7-836c72ae8665" />
 
 
 The Neural Network model has a slightly higher AUC-PR score (0.1906) compared to the XGBoost model (0.1545). AUC-PR measures the area under the precision-recall curve and provides an aggregate measure of model performance for imbalanced datasets.
