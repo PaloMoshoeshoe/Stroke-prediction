@@ -41,4 +41,6 @@ These Black-box models are evaluated on the classifictation metrics shown above.
 (0.59) compared to XGBost with ROC_AUC value of (0.56) and Random Forest ROC_AUC value of (0.55).
 
 The accuracy score is an evaluation metric is a percentage measure that tells how often a model can correctly predict an outcome. In this case, the  XGBost has the highest accuracy value of (0..90) the followed by the Random Forest with the accuracy value of (0.89) and lastly the Neural Ntwork has the lowest accuracy value of (0.80).
+
+Precision is metric that measures the accuracy of positive predictions of a model. 
   
