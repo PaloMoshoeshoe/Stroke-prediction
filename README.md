@@ -4,13 +4,19 @@ A stroke is a medical condition in which poor blood flow to the brain causes cel
 Dataset:
 The dataset used is obtained from Kaggle.
 This dataset is imbalanced (96%:4% no stroke and stroke respectfully). The dataset was balanced using SMOTE (Synthetic Minority Over-sampling Technique).
+
+<img width="386" height="779" alt="image" src="https://github.com/user-attachments/assets/8b55f1cb-ed99-4f9f-a837-10e286111fc8" />
+
+
+
 Context:
 There are two main types of stroke: ischemic, due to lack of blood flow, and hemorrhagic, due to bleeding. Both cause parts of the brain to stop functioning properly.
 Signs and symptoms of a stroke may include an inability to move or feel on one side of the body, problems understanding or speaking, dizziness, or loss of vision to one side. Signs and symptoms often appear soon after the stroke has occurred.
 If symptoms last less than one or two hours, the stroke is a transient ischemic attack (TIA), also called a mini-stroke. A hemorrhagic stroke may also be associated with a severe headache. The symptoms of a stroke can be permanent. Long-term complications may include pneumonia and loss of bladder control.
 The main risk factor for stroke is high blood pressure. Other risk factors include high blood cholesterol, tobacco smoking, obesity, diabetes mellitus, a previous TIA, end-stage kidney disease, and atrial fibrillation.
-Black-Box Models used:
+Black-Box Models used are Random Forest, XGBoost and Neural Networks
 Random Forest Model:
+The Random Forest classifier is performed with 100 estimators and a random state of 42
 
 XGBoost Model:
 The XGBoost model is performed with 300 estimators, a maximum depth of 10, and a learning rate of 0.1. These parameters are gained using GridSearchCV.
@@ -19,6 +25,7 @@ Neural Network Model:
 Before performing Neural Network, the dataset was normalized. The model consists of three hidden layers with 400, 400, and 128 neurons respectively, and reLU activation function. Two dropouts are performed for avoiding overfitting. The output layer has a single neuron with sigmoid activation since we are performing binary classification (stroke or no stroke).
 
 Black-Box Models Evaluation
+The aim to find the black-box model that performs better that the others on our dataset
 
 
 <img width="516" height="135" alt="image" src="https://github.com/user-attachments/assets/3459f8db-4084-4011-b59a-568998dcc189" />
